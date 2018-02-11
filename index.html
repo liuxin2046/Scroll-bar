@@ -4,22 +4,176 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="reset.css">
     <title>Document</title>
+    <style>
+        body{
+            background: #ccc;
+        }
+        .scroll-demo{
+            width: 540px;
+            border: 1px solid #e5e5e5;
+            background: #fff;
+            margin: 30px auto;
+        }
+        .scroll-tab{
+            height: 34px;
+            border-bottom: 1px solid #e5e5e5;
+            color: #666;
+            background:#f8f8f8;
+        }
+        .scroll-tab .scroll-item{
+            list-style: none;
+            float: left;
+            height: 34px;
+            font: 14px/34px "Microsoft Yahei";
+            text-align: center;
+            border-right: 1px solid #e5e5e5;
+            padding: 0 20px;
+        }
+        .scroll-tab .tab-active{
+            color: #00be3c;
+            background: #fff;
+            border-top: 2px solid #00be3c;
+            margin: -1px 0;
+        }
+        .scroll-wrap{
+            width: 100%;
+            height: 300px;
+            position: relative;
+        }
+        .scroll-wrap .scroll-cont{
+            height: 100%;
+            padding: 0 15px;
+            overflow: hidden;
+        }
+        .scroll-wrap .scroll-cont h3{
+            text-align: center;
+            font: 16px/3 "Microsoft Yahei";
+        }
+        .scroll-wrap .scroll-cont p{
+            text-indent: 2em;
+            line-height: 20px;
+            font-size: 14px;
+            margin-bottom: 10px;
+        }
+        .scroll-wrap .scroll-bar{
+            position: absolute;
+            top: 0px;
+            right: 0px;
+            height: 100%;
+            width: 10px;
+            background-color: #eaeaea;
+        }
+        .scroll-wrap .scroll-slider{
+            position: absolute;
+            top: 0px;
+            left: 1px;
+            height: 30px;
+            width: 8px;
+            background-color: #fff;
+        }
+    </style>
 </head>
 <body>
     <div class="scroll-demo">
     <!-- 滚动的标签 -->
-    <div class="scroll-tab">
-    </div>
+    <ul class="scroll-tab">
+        <li class="scroll-item tab-active">第一篇</li>
+        <li class="scroll-item">第二篇</li>
+        <li class="scroll-item">第三篇</li>
+        <li class="scroll-item">第四篇</li>
+    </ul>
     <!-- 滚动的区块 -->
     <div class="scroll-wrap">
         <!-- 滚动的内容 -->
         <div class="scroll-cont">
-
+            <h3 class="anchor">春天来了</h3>
+            <div class="scroll-ol">
+                <p>春天来了,春天来了,来到小溪边,小溪欢快地流着。</p>
+                <p>春天来了，春天来了，
+            　　来到小溪边，
+                小溪欢快地流着。春天来了，春天来了，
+                　　来到小溪边，
+                    小溪欢快地流着。春天来了，春天来了，
+                    　　来到小溪边，
+                        小溪欢快地流着。</p>
+                        <p>春天来了，春天来了，
+                        　　来到小溪边，
+                            小溪欢快地流着。春天来了，春天来了，
+                            　　来到小溪边，
+                                小溪欢快地流着。春天来了，春天来了，
+                                　　来到小溪边，
+                                    小溪欢快地流着。</p>
+                                    <p>春天来了，春天来了，
+                                            　　来到小溪边，
+                                                小溪欢快地流着。春天来了，春天来了，
+                                                　　来到小溪边，
+                                                    小溪欢快地流着。春天来了，春天来了，
+                                                    　　来到小溪边，
+                                                        小溪欢快地流着。</p>
+                                </div>
+                                    <h3 class="anchor">夏天来了</h3>
+                                    <div class="scroll-ol">
+                                        <p>春天来了，春天来了，
+                                                　　来到小溪边，
+                                                    小溪欢快地流着。</p>
+                                        <p>春天来了，春天来了，
+                                    　　来到小溪边，
+                                        小溪欢快地流着。春天来了，春天来了，
+                                        　　来到小溪边，
+                                            小溪欢快地流着。春天来了，春天来了，
+                                            　　来到小溪边，
+                                                小溪欢快地流着。</p>
+                                                <p>春天来了，春天来了，
+                                                　　来到小溪边，
+                                                    小溪欢快地流着。春天来了，春天来了，
+                                                    　　来到小溪边，
+                                                        小溪欢快地流着。春天来了，春天来了，
+                                                        　　来到小溪边，
+                                                            小溪欢快地流着。</p></div>
+                                                            <h3 class="anchor">秋天来了</h3>
+                                                            <div class="scroll-ol">
+                                                                <p>春天来了，春天来了，
+                                                                        　　来到小溪边，
+                                                                            小溪欢快地流着。</p>
+                                                                <p>春天来了，春天来了，
+                                                            　　来到小溪边，
+                                                                小溪欢快地流着。春天来了，春天来了，
+                                                                　　来到小溪边，
+                                                                    小溪欢快地流着。春天来了，春天来了，
+                                                                    　　来到小溪边，
+                                                                        小溪欢快地流着。</p>
+                                                                        <p>春天来了，春天来了，
+                                                                        　　来到小溪边，
+                                                                            小溪欢快地流着。春天来了，春天来了，
+                                                                            　　来到小溪边，
+                                                                                小溪欢快地流着。春天来了，春天来了，
+                                                                                　　来到小溪边，
+                                                                                    小溪欢快地流着。</p></div>
+                                                                                    <h3 class="anchor">冬天来了</h3>
+                                                                                    <div class="scroll-ol">
+                                                                                        <p>春天来了，春天来了，
+                                                                                                　　来到小溪边，
+                                                                                                    小溪欢快地流着。</p>
+                                                                                        <p>春天来了，春天来了，
+                                                                                    　　来到小溪边，
+                                                                                        小溪欢快地流着。春天来了，春天来了，
+                                                                                        　　来到小溪边，
+                                                                                            小溪欢快地流着。春天来了，春天来了，
+                                                                                            　　来到小溪边，
+                                                                                                小溪欢快地流着。</p>
+                                                                                                <p>春天来了，春天来了，
+                                                                                                　　来到小溪边，
+                                                                                                    小溪欢快地流着。春天来了，春天来了，
+                                                                                                    　　来到小溪边，
+                                                                                                        小溪欢快地流着。春天来了，春天来了，
+                                                                                                        　　来到小溪边，
+                                                                                                            小溪欢快地流着。</p></div>
         </div>
         <!-- 滚动条 -->
         <div class="scroll-bar">
-
+            <div class="scroll-slider"></div>
         </div>
     </div>
 </div>
